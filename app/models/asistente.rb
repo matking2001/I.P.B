@@ -1,0 +1,2 @@
+class Asistente < ApplicationRecord
+end

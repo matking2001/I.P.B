@@ -1,0 +1,50 @@
+<h1>Lista de asistentes</h1>
+
+<div class="d-flex justify-content-center">
+    <div class="row mb-3">
+        <div class="col">
+            <%= link_to new_asistente_path, class: "btn btn-info btn-lg" do %>
+            Nuevo 
+            <% end %>
+        </div>
+        <div class="col">
+            <%= link_to asistentes_path(format: 'xlsx'), class: "btn btn-primary btn-lg" do %>
+                Excel
+            <% end %>
+        </div>  
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-11 mx-auto">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <div class="box">
+          <div class="table-responsive">
+            <table id="asistente" class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Identificacion</th>
+                  <th>Primer nombre</th>
+                  <th>Segundo nombre</th>
+                  <th>Primer apellido</th>
+                  <th>Segundo apellido</th>
+                  <th>Télefono</th>
+                  <th>Correo</th>
+                  <th>Dirección</th>
+                  <th>Ocupación</th>
+                  <th>Cargo secular</th>
+                  <th class="text-success">Mostrar</th>
+                </tr>
+              </thead>
+            
+              <tbody>
+                <%= render @asistentes %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

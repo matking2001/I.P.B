@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-md-4 mx-auto mt-2">
+    <div class="card shadow-lg">
+      <div class="card-body">
+        <div class="box">
+          <h2 class="text-center">Datos personales</h2>
+          <p>
+            <strong>Identificacion:</strong>
+            <%= @asistente.identificacion %>
+          </p>
+          
+          <p>
+            <strong>Primer nombre:</strong>
+            <%= @asistente.primer_nombre %>
+          </p>
+          
+          <p>
+            <strong>Segundo nombre:</strong>
+            <%= @asistente.segundo_nombre %>
+          </p>
+          
+          <p>
+            <strong>Primer apellido:</strong>
+            <%= @asistente.primer_apellido %>
+          </p>
+          
+          <p>
+            <strong>Segundo apellido:</strong>
+            <%= @asistente.segundo_apellido %>
+          </p>
+          
+          <p>
+            <strong>Telefono:</strong>
+            <%= @asistente.telefono %>
+          </p>
+          
+          <p>
+            <strong>Correo:</strong>
+            <%= @asistente.correo %>
+          </p>
+          
+          <p>
+            <strong>Direccion:</strong>
+            <%= @asistente.direccion %>
+          </p>
+          
+          <p>
+            <strong>Ocupacion:</strong>
+            <%= @asistente.ocupacion %>
+          </p>
+          
+          <p>
+            <strong>Cargo secular:</strong>
+            <%= @asistente.cargo_secular %>
+          </p>
+          <div class="row">
+            <div class="col">
+              <%= link_to edit_asistente_path(@asistente), class: "btn btn-warning btn-block" do %>
+                <%= fa_icon 'pencil-alt'%>
+                Editar
+              <% end %> 
+            </div>
+            <div class="col">
+              <%= link_to  asistente_path(@asistente), class: "btn btn-danger btn-block", method: :delete, data: { confirm: 'Are you sure?'} do%>
+                <%= fa_icon 'trash' %>
+                Eliminar
+              <% end %>
+            </div>
+            <div class="col">
+              <%= link_to  asistentes_path(@asistente), class: "btn btn-primary btn-block" do %>
+                  <%= fa_icon 'long-arrow-alt-left'%>
+                  Regresar
+              <% end %>    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

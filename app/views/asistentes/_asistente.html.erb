@@ -1,0 +1,16 @@
+<tr>
+    <td><%= asistente.identificacion %></td>
+    <td><%= asistente.primer_nombre %></td>
+    <td><%= asistente.segundo_nombre %></td>
+    <td><%= asistente.primer_apellido %></td>
+    <td><%= asistente.segundo_apellido %></td>
+    <td><%= asistente.telefono %></td>
+    <td><%= asistente.correo %></td>
+    <td><%= asistente.direccion %></td>
+    <td><%= asistente.ocupacion %></td>
+    <td><%= asistente.cargo_secular %></td>
+    <td><%= link_to  asistente, class: "btn btn-success" do %>
+            <% fa_icon ('eye')%>
+        <% end %>    
+    </td>
+</tr>
