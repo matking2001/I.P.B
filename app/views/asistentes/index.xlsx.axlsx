@@ -1,7 +1,7 @@
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Asistentes") do |sheet|
-sheet.add_row ['Identificacion', 'Primer nombre', 'Segundo nombre', 'Primer apellido', 'Segundo apellido','Télefono', 'Correo', 'Dirección', 'Ocupacion', 'Cargo secular']
+sheet.add_row ['Identificacion', 'Primer nombre', 'Segundo nombre', 'Primer apellido', 'Segundo apellido','Genero','Télefono', 'Correo', 'Dirección', 'Ocupacion', 'Cargo secular']
 @asistentes.each do |a|
-    sheet.add_row [a.identificacion, a.primer_nombre, a.segundo_nombre, a.primer_apellido, a.segundo_apellido, a.telefono, a.correo, a.direccion, a.ocupacion, a.cargo_secular]
+    sheet.add_row [a.identificacion, a.primer_nombre, a.segundo_nombre, a.primer_apellido, a.segundo_apellido,a.genero, a.telefono, a.correo, a.direccion, a.ocupacion, a.cargo_secular]
   end
 end

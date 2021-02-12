@@ -3,43 +3,46 @@
     <div class="card">
       <div class="card-body">
         <div class="box">
-          <%= simple_form_for(@asistente) do |f| %>
-              <%= f.input :identificacion %>
-              <div class="row">
-                <div class="col"><%= f.input :primer_nombre %></div>
-                <div class="col"><%= f.input :segundo_nombre %></div>
-              </div>
-              
-              <div class="row">
-                <div class="col"><%= f.input :primer_apellido %></div>
-                <div class="col"><%= f.input :segundo_apellido %></div>
-              </div>
+          <%= simple_form_for(@asistente) do |f| %> <%= f.input :identificacion
+          %>
+          <div class="row">
+            <div class="col"><%= f.input :primer_nombre %></div>
+            <div class="col"><%= f.input :segundo_nombre %></div>
+          </div>
 
-              <%= f.input :cargo_secular %>
+          <div class="row">
+            <div class="col"><%= f.input :primer_apellido %></div>
+            <div class="col"><%= f.input :segundo_apellido %></div>
+          </div>
 
-              <div class="row">
-                <div class="col"><%= f.input :telefono %></div>
-                <div class="col"><%= f.input :correo %></div>
+          <%= f.input :cargo_secular %>
+
+          <div class="row">
+            <div class="col"><%= f.input :telefono %></div>
+            <div class="col"><%= f.input :correo %></div>
+          </div>
+
+          <%= f.input :genero, as: :radio_buttons, collection: ['Masculino', 'Femenino'] %>
+          
+          <div class="row">
+            <div class="col"><%= f.input :direccion %></div>
+            <div class="col"><%= f.input :ocupacion %></div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="d-flex justify-content-center">
+                <%= f.button :submit, class: "btn-primary btn-block" %>
               </div>
+            </div>
 
-              <div class="row">
-                <div class="col"><%= f.input :direccion %></div>
-                <div class="col"><%= f.input :ocupacion %></div>
+            <div class="col">
+              <div class="d-flex justify-content-center">
+                <%= link_to 'Regresar' , asistentes_path, class: "btn
+                btn-warning btn-block" %>
               </div>
-
-              <div class="row">
-                <div class="col">
-                  <div class="d-flex justify-content-center">
-                    <%= f.button :submit, class: "btn-primary btn-block" %>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="d-flex justify-content-center">
-                    <%= link_to 'Regresar', asistentes_path, class: "btn btn-warning btn-block" %>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div>
           <% end %>
         </div>
       </div>

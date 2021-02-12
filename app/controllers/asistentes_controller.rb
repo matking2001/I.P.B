@@ -60,7 +60,7 @@ class AsistentesController < ApplicationController
   end
 
   def asistente_params
-    params.require(:asistente).permit(:identificacion, :primer_nombre, :segundo_nombre, :primer_apellido, :segundo_apellido, :telefono, :correo, :direccion, :ocupacion, :cargo_secular)
+    params.require(:asistente).permit(:genero, :identificacion, :primer_nombre, :segundo_nombre, :primer_apellido, :segundo_apellido, :telefono, :correo, :direccion, :ocupacion, :cargo_secular)
   end
 
 end
