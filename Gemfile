@@ -10,6 +10,7 @@ gem 'font_awesome5_rails'
 gem 'simple_form'
 gem 'caxlsx_rails', '~> 0.6.2'
 gem 'devise'
+gem 'pg'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
