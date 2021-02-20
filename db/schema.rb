@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_12_151428) do
+ActiveRecord::Schema.define(version: 2021_02_20_150103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "asistentes", force: :cascade do |t|
-    t.integer "identificacion"
+    t.string "identificacion"
     t.string "primer_nombre"
     t.string "segundo_nombre"
     t.string "primer_apellido"
     t.string "segundo_apellido"
     t.string "correo"
     t.string "direccion"
-    t.integer "telefono"
+    t.string "telefono"
     t.string "cargo_secular"
     t.string "ocupacion"
     t.datetime "created_at", precision: 6, null: false

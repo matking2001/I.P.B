@@ -1,3 +1,7 @@
+<%= link_to  asistentes_path, class: "btn btn-primary btn-md mt-3" do %>
+  <%= fa_icon 'long-arrow-alt-left'%>
+  Regresar
+<% end %> 
 <div class="row">
   <div class="col-md-4 mx-auto mt-2">
     <div class="card shadow-lg">
@@ -65,7 +69,7 @@
               <% end %> 
             </div>
             <div class="col">
-              <%= link_to  asistente_path(@asistente), class: "btn btn-danger btn-block", method: :delete, data: { confirm: 'Are you sure?'} do%>
+              <%= link_to  asistente_path(@asistente), class: "btn btn-danger btn-block", method: :delete, data: { confirm: '¿Estas seguro de eliminar a este asistente?'} do%>
                 <%= fa_icon 'trash' %>
                 Eliminar
               <% end %>
